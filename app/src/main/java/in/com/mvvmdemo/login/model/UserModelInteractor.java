@@ -1,4 +1,4 @@
-package in.com.mvvmdemo.login;
+package in.com.mvvmdemo.login.model;
 
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
@@ -6,10 +6,11 @@ import android.util.Patterns;
 
 import java.util.List;
 
-import in.com.mvvmdemo.login.model.GenreListResponse;
-import in.com.mvvmdemo.login.model.GenreResponse;
-import in.com.mvvmdemo.login.network.ApiClient;
-import in.com.mvvmdemo.login.network.ApiInterface;
+import in.com.mvvmdemo.login.datamodel.GenreListResponse;
+import in.com.mvvmdemo.login.datamodel.GenrelResponse;
+import in.com.mvvmdemo.network.ApiClient;
+import in.com.mvvmdemo.network.ApiInterface;
+import in.com.mvvmdemo.utils.AppConstants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -21,7 +22,7 @@ public class UserModelInteractor {
     private String mPassword;
     ApiInterface apiService;
     int statusCode=0;
-    String API_KEY = "f17e9c5e6c34ad9dc2bf6aab852c0cc7";
+
 
     public UserModelInteractor(@NonNull final String email, @NonNull final String password) {
         mEmail = email;
@@ -56,13 +57,13 @@ public class UserModelInteractor {
 
     public int fetchMoviesList(){
 
-        Call<GenreListResponse> call = apiService.getGenerList(API_KEY);
+        Call<GenreListResponse> call = apiService.getGenerList(AppConstants.API_KEY);
         call.enqueue(new Callback<GenreListResponse>() {
             @Override
             public void onResponse(Call<GenreListResponse> call, Response<GenreListResponse> response) {
                 if (response.isSuccessful()) {
                     statusCode = response.code();
-                    List<GenreResponse> genList = response.body().getGenres();
+                    List<GenrelResponse> genList = response.body().getGenres();
                 }
             }
 

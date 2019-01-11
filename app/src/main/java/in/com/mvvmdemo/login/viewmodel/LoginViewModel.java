@@ -1,7 +1,9 @@
-package in.com.mvvmdemo.login;
+package in.com.mvvmdemo.login.viewmodel;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.arch.lifecycle.ViewModel;
+
+import in.com.mvvmdemo.login.model.UserModelInteractor;
 
 public class LoginViewModel extends ViewModel  {
 

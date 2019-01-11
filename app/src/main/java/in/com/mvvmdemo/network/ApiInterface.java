@@ -1,7 +1,7 @@
-package in.com.mvvmdemo.login.network;
+package in.com.mvvmdemo.network;
 
 
-import in.com.mvvmdemo.login.model.GenreListResponse;
+import in.com.mvvmdemo.login.datamodel.GenreListResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

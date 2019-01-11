@@ -1,4 +1,4 @@
-package in.com.mvvmdemo.login.network;
+package in.com.mvvmdemo.network;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

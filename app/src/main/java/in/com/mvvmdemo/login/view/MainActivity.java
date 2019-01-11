@@ -1,4 +1,4 @@
-package in.com.mvvmdemo.login;
+package in.com.mvvmdemo.login.view;
 
 import android.arch.lifecycle.LifecycleOwner;
 import android.arch.lifecycle.Observer;
@@ -12,6 +12,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import in.com.mvvmdemo.R;
+import in.com.mvvmdemo.login.viewmodel.LoginViewModel;
 
 
 public class MainActivity extends AppCompatActivity implements LifecycleOwner{

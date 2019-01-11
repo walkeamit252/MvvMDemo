@@ -1,8 +1,8 @@
-package in.com.mvvmdemo.login.model;
+package in.com.mvvmdemo.login.datamodel;
 
 import com.google.gson.annotations.SerializedName;
 
-public class GenreResponse {
+public class GenrelResponse {
 
     @SerializedName("id")
     private int id;
